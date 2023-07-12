@@ -1,9 +1,6 @@
 package go_helper
 
-import (
-	"net/http"
-	"os"
-)
+import "net/http"
 
 // TODO: Please implement this with more HTTP Header
 type HeaderParams struct {
@@ -13,15 +10,6 @@ type HeaderParams struct {
 	ContentType               string
 }
 
-func GetENV(key string, default_value string) (ENV_VALUE string) {
-	ENV_VALUE = os.Getenv(key)
-	if ENV_VALUE == "" {
-		ENV_VALUE = default_value
-	}
-	return
-}
-
-// TODO: Please implement this with more HTTP Header
 func SetHeader(w http.ResponseWriter, params *HeaderParams) {
 
 	// set default value
